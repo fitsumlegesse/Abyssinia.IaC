@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vnetName": {
+      "value": "aby-corp-vnet-hub-wus2"
+    },
+    "vnetAddressPrefix": {
+      "value": "10.0.0.0/16"
+    },
+
+    "subnet1Prefix": {
+      "value": "10.0.0.0/27"
+    },
+
+    "subnet1Name": {
+      "value": "aby-hr-sn-wus2"
+    },
+    "subnet2Prefix": {
+      "value": "10.0.0.32/27"
+    },
+    "subnet2Name": {
+      "value": "aby-mktg-sn-wus2"
+    },
+    "location": {
+      "value": "Standard"
+    },
+
+    "tags": {
+      "value": {
+        "Group Name": "Abyssinia Tax & Accounting",
+        "Deployed by": "Fitsum T Legesse",
+        "SL": "5",
+        "PL": "4",
+        "Internal Owner": "Fitsum T Legesse",
+        "Support Contact": "fitsum.legesse@neudesic.com",
+        "Change Control": "No"
+      }
+    }
+  }
+}
