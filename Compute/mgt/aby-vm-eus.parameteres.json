@@ -1,0 +1,86 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus"
+    },
+    "networkInterfaceName": {
+      "value": "vmadmin751"
+    },
+    "enableAcceleratedNetworking": {
+      "value": true
+    },
+    "networkSecurityGroupName": {
+      "value": "vmadmin-nsg"
+    },
+    "networkSecurityGroupRules": {
+      "value": [
+        {
+          "name": "RDP",
+          "properties": {
+            "priority": 300,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "3389"
+          }
+        }
+      ]
+    },
+    "subnetName": {
+      "value": "aby-mgt-sn-eus"
+    },
+    "virtualNetworkId": {
+      "value": "/subscriptions/4808e0f7-190f-482d-906c-08c77f186e28/resourceGroups/rg-mgmt-it-eastus/providers/Microsoft.Network/virtualNetworks/aby-vnet-hub-eus"
+    },
+    "publicIpAddressName": {
+      "value": "vmadmin-ip"
+    },
+    "publicIpAddressType": {
+      "value": "Static"
+    },
+    "publicIpAddressSku": {
+      "value": "Standard"
+    },
+    "pipDeleteOption": {
+      "value": "Detach"
+    },
+    "virtualMachineName": {
+      "value": "vmadmin"
+    },
+    "virtualMachineComputerName": {
+      "value": "vmadmin"
+    },
+    "virtualMachineRG": {
+      "value": "rg-mgmt-it-eastus"
+    },
+    "osDiskType": {
+      "value": "Standard_LRS"
+    },
+    "osDiskDeleteOption": {
+      "value": "Delete"
+    },
+    "virtualMachineSize": {
+      "value": "Standard_D2s_v3"
+    },
+    "nicDeleteOption": {
+      "value": "Detach"
+    },
+    "adminUsername": {
+      "value": "abyadmin"
+    },
+    "adminPassword": {
+      "value": "Zdthnkp1234**"
+    },
+    "patchMode": {
+      "value": "AutomaticByOS"
+    },
+    "enableHotpatching": {
+      "value": false
+    }
+  }
+}

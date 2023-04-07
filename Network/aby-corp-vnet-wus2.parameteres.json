@@ -3,23 +3,23 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "vnetName": {
-      "value": "aby-corp-vnet-hub-eus"
+      "value": "aby-vnet-hub-eus"
     },
     "vnetAddressPrefix": {
       "value": "10.0.0.0/16"
     },
 
     "subnet1Name": {
-      "value": "aby-it-sn-eus"
+      "value": "aby-mgt-sn-eus"
     },
     "subnet2Name": {
-      "value": "aby-dev-sn-eus"
+      "value": "aby-app-sn-eus"
     },
     "subnet3Name": {
-      "value": "aby-tst-sn-eus"
+      "value": "aby-data-sn-eus"
     },
     "subnet4Name": {
-      "value": "aby-prd-sn-eus"
+      "value": "aby-be-sn-eus"
     },
     "subnet1Prefix": {
       "value": "10.0.0.0/24"
