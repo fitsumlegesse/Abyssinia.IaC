@@ -33,8 +33,8 @@ else {
  
 Write-Host "Starting deployment for Azure Virtual Network";
 
-$templateFilePath = "C:\Users\Fitsum\Documents\ftl-projects\Abyssinia\NSG\nsgone\aby-corp-nsg-wus2.template.json"
-$templateParameterFilePath = "C:\Users\Fitsum\Documents\ftl-projects\Abyssinia\NSG\nsgone\aby-corp-nsg-wus2.parameteres.json"
+$templateFilePath = "network\nsg\nsgone\aby-corp-nsg-wus2.template.json"
+$templateParameterFilePath = "network\nsg\nsgone\aby-corp-nsg-wus2.parameteres.json"
 
 $timestamp = ((Get-Date).ToString("MM-dd-yyyy-hh-mm-ss"))
 $deploymentName = "Abyssinia" + $timestamp

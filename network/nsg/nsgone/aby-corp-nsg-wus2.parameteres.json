@@ -2,11 +2,28 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "nsgName": {
-      "value": "aby-itmgt-nsg-wus2"
+    "location": {
+      "value": "eastus"
     },
-    "itmgmtSubnet": {
-      "value": "10.0.0.0/24"
+    "networkSecurityGroupName": {
+      "value": "nsg-js-it-eastus"
+    },
+    "networkSecurityGroupRules": {
+      "value": [
+        {
+          "name": "RDP",
+          "properties": {
+            "priority": 300,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "3389"
+          }
+        }
+      ]
     }
   }
 }
