@@ -3,25 +3,37 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "vnetName": {
-      "value": "aby-corp-vnet-hub-wus2"
+      "value": "aby-corp-vnet-hub-eus"
     },
     "vnetAddressPrefix": {
       "value": "10.0.0.0/16"
     },
 
-    "subnet1Prefix": {
-      "value": "10.0.0.0/27"
-    },
-
     "subnet1Name": {
-      "value": "aby-hr-sn-wus2"
-    },
-    "subnet2Prefix": {
-      "value": "10.0.0.32/27"
+      "value": "aby-it-sn-eus"
     },
     "subnet2Name": {
-      "value": "aby-mktg-sn-wus2"
+      "value": "aby-dev-sn-eus"
     },
+    "subnet3Name": {
+      "value": "aby-tst-sn-eus"
+    },
+    "subnet4Name": {
+      "value": "aby-prd-sn-eus"
+    },
+    "subnet1Prefix": {
+      "value": "10.0.0.0/24"
+    },
+    "subnet2Prefix": {
+      "value": "10.0.1.0/24"
+    },
+    "subnet3Prefix": {
+      "value": "10.0.2.0/24"
+    },
+    "subnet4Prefix": {
+      "value": "10.0.3.0/24"
+    },
+
     "location": {
       "value": "Standard"
     },

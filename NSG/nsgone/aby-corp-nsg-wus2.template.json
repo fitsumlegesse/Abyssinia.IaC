@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "nsgName": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the Network Security Group"
+      }
+    },
+    "itmgmtSubnet": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the IT management subnet"
+      }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "apiVersion": "2021-02-01",
+      "name": "[parameters('nsgName')]",
+      "location": "eastus",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "AllowITMgmtToAll",
+            "properties": {
+              "description": "Allow IT management subnet to communicate with all subnets",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "[parameters('itmgmtSubnet')]",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 100,
+              "direction": "Inbound"
+            }
+          }
+        ]
+      }
+    }
+  ]
+
+}

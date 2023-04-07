@@ -33,14 +33,16 @@ else {
  
 Write-Host "Starting deployment for Azure Virtual Network";
 
-$templateFilePath = "C:\Users\Fitsum\Documents\ftl-projects\Abyssinia\Network\aby-corp-vnet-wus2.template.json"
-$templateParameterFilePath = "C:\Users\Fitsum\Documents\ftl-projects\Abyssinia\Network\aby-corp-vnet-wus2.parameteres.json"
+$templateFilePath = "C:\Users\Fitsum\Documents\ftl-projects\Abyssinia\NSG\nsgone\aby-corp-nsg-wus2.template.json"
+$templateParameterFilePath = "C:\Users\Fitsum\Documents\ftl-projects\Abyssinia\NSG\nsgone\aby-corp-nsg-wus2.parameteres.json"
 
 $timestamp = ((Get-Date).ToString("MM-dd-yyyy-hh-mm-ss"))
 $deploymentName = "Abyssinia" + $timestamp
 if (Test-Path $templateParameterFilePath) {
-  New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -location "eastus" -Name $deploymentName -TemplateFile $templateFilePath -TemplateParameterFile $templateParameterFilePath -Mode Incremental -Verbose;
+$resourceGroupLocation = [string]"eastus"
+$resourceGroupLocation = [string]"eastus"
+  New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName  -Name $deploymentName -TemplateFile $templateFilePath -TemplateParameterFile $templateParameterFilePath -Mode Incremental -Verbose;
 }
 else {
-  New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -location "eastus" -Name $deploymentName -TemplateFile $templateFilePath  -Mode Incremental -Verbose;
+  New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName  -Name $deploymentName -TemplateFile $templateFilePath  -Mode Incremental -Verbose;
 }

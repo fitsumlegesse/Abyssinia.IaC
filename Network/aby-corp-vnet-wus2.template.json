@@ -30,13 +30,7 @@
         "description": "Subnet 1 Prefix"
       }
     },
-    "subnet1Name": {
-      "type": "string",
-      "defaultValue": "Subnet1",
-      "metadata": {
-        "description": "Subnet 1 Name"
-      }
-    },
+
     "subnet2Prefix": {
       "type": "string",
       "defaultValue": "10.0.1.0/24",
@@ -44,7 +38,42 @@
         "description": "Subnet 2 Prefix"
       }
     },
+    "subnet3Prefix": {
+      "type": "string",
+      "defaultValue": "10.0.1.0/24",
+      "metadata": {
+        "description": "Subnet 2 Prefix"
+      }
+    },
+    "subnet4Prefix": {
+      "type": "string",
+      "defaultValue": "10.0.1.0/24",
+      "metadata": {
+        "description": "Subnet 2 Prefix"
+      }
+    },
+    "subnet1Name": {
+      "type": "string",
+      "defaultValue": "Subnet1",
+      "metadata": {
+        "description": "Subnet 1 Name"
+      }
+    },
     "subnet2Name": {
+      "type": "string",
+      "defaultValue": "Subnet2",
+      "metadata": {
+        "description": "Subnet 2 Name"
+      }
+    },
+    "subnet3Name": {
+      "type": "string",
+      "defaultValue": "Subnet2",
+      "metadata": {
+        "description": "Subnet 2 Name"
+      }
+    },
+    "subnet4Name": {
       "type": "string",
       "defaultValue": "Subnet2",
       "metadata": {
@@ -87,6 +116,18 @@
             "name": "[parameters('subnet2Name')]",
             "properties": {
               "addressPrefix": "[parameters('subnet2Prefix')]"
+            }
+          },
+          {
+            "name": "[parameters('subnet3Name')]",
+            "properties": {
+              "addressPrefix": "[parameters('subnet3Prefix')]"
+            }
+          },
+          {
+            "name": "[parameters('subnet4Name')]",
+            "properties": {
+              "addressPrefix": "[parameters('subnet4Prefix')]"
             }
           }
         ]
